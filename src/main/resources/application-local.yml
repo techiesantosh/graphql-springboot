@@ -1,0 +1,21 @@
+server:
+  port: 8083
+
+spring:
+  graphql:
+    path: /graphql
+    websocket:
+      path: /graphql
+      connection-init-timeout: 60
+    graphiql:
+      enabled: true
+    schema:
+      locations: classpath:chooseapi/
+logging:
+  level:
+    reactor:
+      netty: debug
+    org:
+      springframework:
+        graphql: debug
+        http: debug
